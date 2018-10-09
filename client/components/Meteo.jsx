@@ -11,6 +11,9 @@ const Meteo = () => (
       <input className='user-input' type='text' name='city' placeholder='city'></input>
       <input className='btn' type='button' value='submit'></input>
     </form>
+    <p>
+      You should go :
+    </p>
   </div>
 )
 
