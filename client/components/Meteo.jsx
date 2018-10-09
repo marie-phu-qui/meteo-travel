@@ -6,6 +6,11 @@ const Meteo = () => (
     <p>
         Meteo
     </p>
+    <form>
+      <input className='user-input' type='text' name='unit' placeholder='unit'></input>
+      <input className='user-input' type='text' name='city' placeholder='city'></input>
+      <input className='btn' type='button' value='submit'></input>
+    </form>
   </div>
 )
 
