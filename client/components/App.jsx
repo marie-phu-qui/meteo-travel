@@ -1,11 +1,14 @@
 import React from 'react'
 
+import Header from './Header'
+import Meteo from './Meteo'
+import Footer from './Footer'
 
 const App = () => (
-  <div className='app-container'>
-    <p>
-        pouet
-    </p>
+  <div className='app-container jumbotron'>
+    <Header />
+    <Meteo />
+    <Footer />
   </div>
 )
 
