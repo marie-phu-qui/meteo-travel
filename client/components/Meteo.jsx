@@ -1,7 +1,18 @@
 import React from 'react'
+import { connect } from "react-redux";
+
+import {fetchMeteo} from './../actions'
 
 
-const Meteo = () => (
+class Meteo extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+    }
+  }
+
+render() {
+  return (
   <div className='meteo-container'>
     <p>
         Meteo
@@ -12,9 +23,28 @@ const Meteo = () => (
       <input className='btn' type='button' value='submit'></input>
     </form>
     <p>
-      You should go :
+      You should go : 
     </p>
+    {/* {this.props.meteo && JSON.parse(this.props.meteo).map((meteo, i) => {
+      return (
+      <div key={i++} temperature={(this.props.language)? this.props.meteo(meteo.temperature) : (article.temperature)} url={article.url} >
+      </div>
+      )
+    }) } */}
   </div>
-)
+  )}
+}
 
-export default Meteo
+
+const mapStateToProps = state => ({
+  meteo: state.meteo,
+})
+
+const mapDispatchToProps = (dispatch) => {
+  console.log('hello', dispatch)
+  dispatch(fetchMeteo())
+  return {}
+}
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(Meteo);
