@@ -1,11 +1,16 @@
 import React from 'react'
 
+import Header from './Header'
+import Meteo from './Meteo'
+import Mars from './Mars'
+import Footer from './Footer'
 
 const App = () => (
   <div className='app-container'>
-    <p>
-        pouet
-    </p>
+    <Header />
+    <Meteo />
+    <Mars />
+    <Footer />
   </div>
 )
 
