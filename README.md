@@ -15,17 +15,23 @@ The goal of this app is to focus on my APIs controls with both javascripts calls
 
   | Method | Endpoint | Response | 
   | --- | --- | --- |
-  | GET | api/ | array of objects | 
+  | GET | api/v2.5/earth-weather | array of objects | 
 
 
 Method : GET 
-Route : / API/
+Route : / API/V2.5/EARTH_WEATHER
+Params : Units = 'metric' - City = 'Bouffemont'
 (body) - an array of objects
 
 ```sh
 [
     {
-        
+       "name":"Bouffemont",
+       "country":"FR",
+       "temperature":11.62,
+       "pressure":"1017mb",
+       "humidity":"87%",
+       "weather_condition":"Fog"
     }
 ]
 ```
