@@ -20,7 +20,7 @@ function mars(state = INITIAL_MARS_STATE, action) {
   }
 }
 
-const LOADING = null
+const LOADING = false
 function loading(state = LOADING, action) {
   switch (action.type) {
     case "REQUEST_DATA":

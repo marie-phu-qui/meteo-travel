@@ -38,8 +38,7 @@ console.log('hello 0')
     return request
       .get('/api/v2.5/earth-meteo')
       .then(res => {
-        console.log(res.text)
-        dispatch(receiveMeteo())
+        return dispatch(receiveMeteo(res.text))
       })
       .catch(err => {
         dispatch(showError(err.message))
@@ -56,10 +55,10 @@ export function fetchMars() {
       return request
         .get('/api/mars-meteo')
         .then(res => {
-          console.log(res.text)
-          dispatch(receiveMars())
+          return dispatch(receiveMars(res.text))
         })
         .catch(err => {
+          console.log(err)
           dispatch(showError(err.message))
         })
     }

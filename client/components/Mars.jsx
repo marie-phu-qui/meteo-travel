@@ -10,7 +10,7 @@ const Mars = props => {
       <div>
           <h4>Would I be better of living on Mars ?</h4>
         <p>
-          
+          {props.mars.name && props.mars.name}
         </p>
       </div>
     );
