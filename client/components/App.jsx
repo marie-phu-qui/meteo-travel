@@ -5,7 +5,7 @@ import Meteo from './Meteo'
 import Footer from './Footer'
 
 const App = () => (
-  <div className='app-container jumbotron'>
+  <div className='app-container'>
     <Header />
     <Meteo />
     <Footer />

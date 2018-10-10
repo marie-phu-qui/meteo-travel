@@ -18,19 +18,18 @@ render() {
     <p>
         Meteo
     </p>
-
     
     <div>
-
     <form className="form-inline"> 
+
     <label className="sr-only" htmlFor="inlineFormInput">city</label> 
     <input className="form-control mb-2 mr-sm-2 mb-sm-0" placeholder="City"/> 
-    <label className="sr-only" htmlFor="inlineFormInputGroup">country</label> 
+    <label className="sr-only" >country</label> 
     
     <div className="input-group mb-2 mr-sm-2 mb-sm-0"> 
     <div className="input-group-addon">in
     </div> 
-    <input className="form-control" id="inlineFormInputGroup" placeholder="Country"/>
+    <input className="form-control" placeholder="Country"/>
     </div> 
 
     <div className="btn-group" data-toggle="buttons"> 
@@ -41,9 +40,9 @@ render() {
     <label className="btn btn-primary"> 
     <input type="radio" name="unit" value="imperial"/> imperial 
     </label> 
+    </div>
 
     <input className='btn btn-primary btn-lg btn-block' type='button' value='submit'/>
-    </div>
     </form>
     </div>
 
