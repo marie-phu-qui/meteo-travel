@@ -17,7 +17,7 @@ export const showError = (errorMessage) => {
 
 export const receiveMeteo = (meteo) => {
   return {
-    type: "RECEIVE_Meteo",
+    type: "RECEIVE_METEO",
     meteo: meteo
   }
 }
@@ -32,7 +32,7 @@ console.log('hello 0')
       .get('/api/v2.5/earth-meteo')
       .then(res => {
         console.log("hello 2")
-        setTimeout(() => dispatch(receiveMeteo(res)), 4000)
+        dispatch(receiveMeteo())
       })
       .catch(err => {
         dispatch(showError(err.message))

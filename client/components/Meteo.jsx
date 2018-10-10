@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from "react-redux";
 
-import {fetchMeteo} from './../actions'
+import {fetchMeteo} from '../actions'
 
 
 class Meteo extends React.Component {
@@ -41,7 +41,6 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = (dispatch) => {
-  console.log('hello', dispatch)
   dispatch(fetchMeteo())
   return {}
 }
