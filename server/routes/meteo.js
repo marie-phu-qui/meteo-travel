@@ -14,7 +14,7 @@ router.get('/', (req, res) => {
       .then(ApiRes => {
         res.json([
           {
-          "name" : ApiRes.body.list[0].name, 
+          "city" : ApiRes.body.list[0].name, 
           "country": ApiRes.body.list[0].sys.country, 
           "average_temp": ApiRes.body.list[0].main.temp, 
           "temp_min": ApiRes.body.list[0].main.temp_max,

@@ -5,12 +5,13 @@ import { connect } from "react-redux";
 import {fetchMars} from '../actions'
 
 const Mars = props => {
-    console.log('mars : ',props.mars)
+    console.log('mars : ', props.mars)
     return (
+    (props.mars) &&  
       <div>
-          <h4>Would I be better of living on Mars ?</h4>
+          <h4>Would I be better of living on {props.mars.name} ?</h4>
         <p>
-          {props.mars.name && props.mars.name}
+          {props.mars.weather_condition}, {props.mars.average_temp} *C
         </p>
       </div>
     );
