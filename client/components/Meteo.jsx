@@ -20,7 +20,7 @@ render() {
         Meteo
     </p>
     
-    {/* <Form /> */}
+    <Form />
 
     <p>
       Your weather condition :
