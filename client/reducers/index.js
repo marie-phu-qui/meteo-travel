@@ -1,8 +1,17 @@
 import { combineReducers } from 'redux'
 
-
-const INITIAL_METEO_STATE = null
+const INITIAL_METEO_STATE = ""
 function meteo(state = INITIAL_METEO_STATE, action) {
+  switch (action.type) {
+    case "RECEIVE_METEO":
+      return action.meteo
+    default:
+      return state
+  }
+}
+
+const LOADING = null
+function loading(state = LOADING, action) {
   switch (action.type) {
     case "REQUEST_DATA":
       return true
@@ -16,5 +25,6 @@ function meteo(state = INITIAL_METEO_STATE, action) {
 }
 
 export default combineReducers({
-    meteo
+    meteo,
+    loading
 })

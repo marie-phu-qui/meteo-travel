@@ -31,7 +31,7 @@ console.log('hello 0')
     return request
       .get('/api/v2.5/earth-meteo')
       .then(res => {
-        console.log("hello 2")
+        console.log("hello 2", res.text)
         dispatch(receiveMeteo())
       })
       .catch(err => {

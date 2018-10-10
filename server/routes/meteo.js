@@ -12,9 +12,17 @@ router.get('/', (req, res) => {
 
   request.get(`https://api.openweathermap.org/data/2.5/find?q=`+user_city+`&type=like&units=`+user_units+`&APPID=`+Earth_API_Key)
       .then(ApiRes => {
-        console.log(ApiRes.body)
-        res.json(ApiRes.body)
-      })
+        res.json([
+          {
+          "name" : ApiRes.body.list[0].name, 
+          "country": ApiRes.body.list[0].sys.country, 
+          "temperature": ApiRes.body.list[0].main.temp, 
+          "pressure" :ApiRes.body.list[0].main.pressure + 'mb', 
+          "humidity" : ApiRes.body.list[0].main.humidity + '%', 
+          "weather_condition": ApiRes.body.list[0].weather[0].main
+          }
+        ])
+    })
       .catch(err => {
         console.log(err)
       })
