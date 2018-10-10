@@ -21,7 +21,7 @@ The goal of this app is to focus on my APIs controls with both javascripts calls
 Method : GET \
 Route : / API/V2.5/EARTH_WEATHER \
 Params : Units = 'metric' - City = 'Bouffemont' \
-(body) - an array of objects \
+(body) - an array of objects 
 
 ```sh
 [
