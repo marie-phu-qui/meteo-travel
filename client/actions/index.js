@@ -22,7 +22,14 @@ export const receiveMeteo = (meteo) => {
   }
 }
 
-// Fetching from API
+export const receiveMars = (mars) => {
+  return {
+    type: "RECEIVE_MARS",
+    mars: mars
+  }
+}
+
+// Fetching from WEATHER API
 export function fetchMeteo() {
 console.log('hello 0')
   return (dispatch) => {
@@ -31,7 +38,7 @@ console.log('hello 0')
     return request
       .get('/api/v2.5/earth-meteo')
       .then(res => {
-        console.log("hello 2", res.text)
+        console.log(res.text)
         dispatch(receiveMeteo())
       })
       .catch(err => {
@@ -39,3 +46,21 @@ console.log('hello 0')
       })
   }
 }
+
+// Fetching from MARS API
+export function fetchMars() {
+  console.log('hello mars')
+    return (dispatch) => {
+      console.log('hello planet')
+      dispatch(requestDATA())
+      return request
+        .get('/api/mars-meteo')
+        .then(res => {
+          console.log(res.text)
+          dispatch(receiveMars())
+        })
+        .catch(err => {
+          dispatch(showError(err.message))
+        })
+    }
+  }

@@ -1,12 +1,12 @@
 import React from "react";
 
 const MyWeather = props => {
-    console.log(props)
+    console.log('meteo : ',props.meteo)
     return (
       <div>
-          <h4>{props[0].city}, {props[0].country}</h4>
+          <h4>{props.city}, {props.country}</h4>
         <p>
-          {props}
+          hello, hello, hello
         </p>
       </div>
     );

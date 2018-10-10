@@ -16,7 +16,7 @@ router.get('/', (req, res) => {
           {
           "name" : ApiRes.body.list[0].name, 
           "country": ApiRes.body.list[0].sys.country, 
-          "temperature": ApiRes.body.list[0].main.temp, 
+          "average_temp": ApiRes.body.list[0].main.temp, 
           "temp_min": ApiRes.body.list[0].main.temp_max,
           "temp_max": ApiRes.body.list[0].main.temp_max,
           "pressure" :ApiRes.body.list[0].main.pressure + 'mb', 

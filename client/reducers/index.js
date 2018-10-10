@@ -1,10 +1,20 @@
 import { combineReducers } from 'redux'
 
-const INITIAL_METEO_STATE = ""
+const INITIAL_METEO_STATE = [{}]
 function meteo(state = INITIAL_METEO_STATE, action) {
   switch (action.type) {
     case "RECEIVE_METEO":
       return action.meteo
+    default:
+      return state
+  }
+}
+
+const INITIAL_MARS_STATE = [{}]
+function mars(state = INITIAL_MARS_STATE, action) {
+  switch (action.type) {
+    case "RECEIVE_MARS":
+      return action.mars
     default:
       return state
   }
@@ -26,5 +36,6 @@ function loading(state = LOADING, action) {
 
 export default combineReducers({
     meteo,
+    mars,
     loading
 })
