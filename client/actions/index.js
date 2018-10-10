@@ -31,9 +31,7 @@ export const receiveMars = (mars) => {
 
 // Fetching from WEATHER API
 export function fetchMeteo() {
-console.log('hello 0')
   return (dispatch) => {
-    console.log('hello 1')
     dispatch(requestDATA())
     return request
       .get('/api/v2.5/earth-meteo')
@@ -48,9 +46,7 @@ console.log('hello 0')
 
 // Fetching from MARS API
 export function fetchMars() {
-  console.log('hello mars')
     return (dispatch) => {
-      console.log('hello planet')
       dispatch(requestDATA())
       return request
         .get('/api/mars-meteo')

@@ -5,7 +5,6 @@ import { connect } from "react-redux";
 import {fetchMars} from '../actions'
 
 const Mars = props => {
-    console.log('mars : ', props.mars)
     return (
     (props.mars) &&  
       <div>
