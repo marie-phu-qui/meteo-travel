@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from "react-redux";
 
 import {fetchMeteo} from '../actions'
+import MyWeather from './MyWeather'
 
 
 class Meteo extends React.Component {
@@ -22,6 +23,12 @@ render() {
       <input className='user-input' type='text' name='city' placeholder='city'></input>
       <input className='btn' type='button' value='submit'></input>
     </form>
+    <p>
+      Your weather condition :
+    </p>
+    {(this.props.meteo) &&
+    <MyWeather city={this.props.meteo[0].city} country={this.props.meteo[0].country} weather={this.props.meteo[0].weather_condition} temperature={this.props.meteo[0].temperature} humidity={this.props.meteo[0].humidity} pressure={this.props.meteo[0].pressure}/>
+    }
     <p>
       You should go : 
     </p>
