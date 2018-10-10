@@ -22,7 +22,7 @@ router.get('/', (req, res) => {
           "weather_condition": ApiRes.body.list[0].weather[0].main
           }
         ])
-    })
+      })
       .catch(err => {
         console.log(err)
       })
