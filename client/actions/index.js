@@ -34,7 +34,7 @@ export function fetchMeteo() {
   return (dispatch) => {
     dispatch(requestDATA())
     return request
-      .get('/api/v2.5/earth-meteo')
+      .get('/api/v2.5/earth')
       .then(res => {
         return dispatch(receiveMeteo(JSON.parse(res.text)))
       })
@@ -49,7 +49,7 @@ export function fetchMars() {
     return (dispatch) => {
       dispatch(requestDATA())
       return request
-        .get('/api/mars-meteo')
+        .get('/api/mars')
         .then(res => {
           return dispatch(receiveMars(JSON.parse(res.text)[0]))
         })
